@@ -1,0 +1,168 @@
+.shape {
+    position: absolute;
+}
+.banner-section {
+    padding-top: 200px;
+    padding-bottom: 140px;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(max-xxl) {
+        padding-top: 180px;
+        padding-bottom: 110px;
+    }
+    @include breakpoint(max-sm) {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    @include breakpoint(max-xs) {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    .container {
+        position: relative;
+    }
+    .shape1 {
+        right: 0;
+        top: 0;
+        z-index: -1;
+        @media (max-width:1600px) {
+            max-width: 700px;
+        }
+        @include breakpoint(max-xl) {
+            max-width: 620px;
+        }
+        @include breakpoint(max-lg) {
+            max-width: 500px;
+            display: none;
+        }
+    }
+}
+
+.banner-content {
+    max-width: 600px;
+    @include breakpoint(max-xxl) {
+        max-width: 550px;
+    }
+    @include breakpoint(max-xl) {
+        max-width: 500px;
+    }
+    @include breakpoint(max-lg) {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 100px;
+        font-weight: 300;
+        line-height: 1.15;
+        margin-bottom: 25px;
+        @include breakpoint(max-xxl) {
+            font-size: 84px;
+        }
+        @include breakpoint(max-xl) {
+            font-size: 72px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 60px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 48px;
+        }
+        span {
+            line-height: 1;
+            font-weight: 600;
+        }
+    }
+    p {
+        font-size: 24px;
+        color: #345;
+        @include breakpoint(max-xxl) {
+            font-size: 22px;
+        }
+        @include breakpoint(max-xl) {
+            font-size: 20px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 18px;
+        }
+    }
+    .cmn--btn {
+        margin-top: 40px;
+        font-size: 22px;
+        padding: 13px 50px;
+        @include breakpoint(max-xxl) {
+            font-size: 20px;
+        }
+        @include breakpoint(max-xl) {
+            font-size: 18px;
+            padding: 12px 35px;
+        }
+        @include breakpoint(max-md) {
+            padding: 11px 35px;
+        }
+        @include breakpoint(max-xs) {
+            font-size: 16px;
+        }
+    }
+}
+
+.banner-thumb {
+    width: calc(100% - 600px);
+    padding-left: 50px;
+    @include breakpoint(max-xxl) {
+        width: calc(100% - 550px);
+    }
+    @include breakpoint(max-xl) {
+        width: calc(100% - 500px);
+    }
+    img {
+        @include breakpoint(max-xxl) {
+            width: 100%;
+        }
+    }
+}
+
+
+// Inner Hero
+.inner-hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 1;
+    .shape1 {
+        right: 0;
+        top: 0;
+        z-index: -1;
+        max-width: 800px;
+        @include breakpoint(max-xxl) {
+            max-width: 550px;
+        }
+        @include breakpoint(max-xl) {
+            max-width: 500px;
+        }
+        @include breakpoint(max-lg) {
+            max-width: 400px;
+        }
+        @include breakpoint(max-md) {
+            display: none;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.breadcrumb {
+    li {
+        font-size: 20px;
+        margin-right: 25px;
+        color: $dark;
+        a {
+            color: $dark;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

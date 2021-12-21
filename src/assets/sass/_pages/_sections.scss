@@ -1,0 +1,548 @@
+// About Section Starts Here
+.section-thumb {
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+.about-content {
+    padding-right: 60px;
+    @include breakpoint(max-xl) {
+        padding-right: 30px;
+    }
+    @include breakpoint(max-lg) {
+        padding-right: 0px;
+    }
+}
+.feature-item {
+    @extend %flex;
+    max-width: 500px;
+    margin-bottom: 45px;
+    @include breakpoint(max-xxl) {
+        margin-bottom: 40px;
+    }
+    @include breakpoint(max-xs) {
+        margin-bottom: 30px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__thumb {
+        width: 65px;
+        height:65px;
+        @extend %flex-center;
+        background: rgba($primary-color, .1);
+        border-radius: 10px;
+        font-size: 36px;
+        color: $base-color;
+        img {
+            max-width: 35px;
+            box-shadow: 2px 3px 15px rgba($primary-color, .1);
+        }
+    }
+    &__content {
+        width: calc(100% - 75px);
+        padding-left: 20px;
+        @include breakpoint(max-xs) {
+            padding-left: 15px;
+        }
+        .title {
+            margin-bottom: 5px;
+        }
+    }
+}
+.about-thumb {
+    position: relative;
+    @include breakpoint(max-lg) {
+        max-width: 610px;
+        margin-left: auto;
+        .shape1 {
+            bottom: -40px !important;
+        }
+    }
+    @include breakpoint(max-md) {
+        max-width: 450px;
+        margin-left: auto;
+        .shape1 {
+            bottom: -40px !important;
+            max-width: 200px !important;
+        }
+        .icon {
+            width: 50px !important;
+            height: 50px !important;
+            img {
+                max-width: 25px !important;
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        max-width: 350px;
+        margin-left: auto;
+        .shape1 {
+            bottom: -40px !important;
+            max-width: 200px !important;
+        }
+    }
+    @include breakpoint(max-xs) {
+        max-width: 350px;
+        margin-left: auto;
+        .shape1 {
+            bottom: 0px !important;
+            left: 0 !important;
+            position: inherit !important;
+            margin-top: -100px;
+        }
+    }
+    .shape1 {
+        max-width: 250px;
+        bottom: -80px;
+        left: -40px;
+        box-shadow: 0 3px 25px rgba($primary-color, .15);
+        border-radius: 10px;
+        .thumb-content {
+            position: absolute;
+            top: 0px;
+            left:0px;
+            padding: 15px;
+            .title {
+                color: $white;
+                padding-right: 45px;
+            }
+        }
+        .icon {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: $white;
+            box-shadow: 0 3px 15px rgba($white, .3);
+            @extend %flex-center;
+            img {
+                max-width: 34px;
+            }
+        }
+    }
+}
+// About Section Ends Here
+
+
+// How it Works Section Starts Here
+div[class*='col'] {
+    &:last-child {
+        .how-item {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+.how-item {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    &::before {
+        @include line-ico;
+        content: '\f30b';
+        font-size: 56px;
+        right: -50px;
+        top: 50px;
+        line-height: 1;
+        color: $base-color;
+        @include breakpoint(max-xl) {
+            font-size: 48px;
+        }
+        @include breakpoint(max-lg) {
+            right: -30px;
+        }
+        @include breakpoint(max-md) {
+            display: none;
+        }
+    }
+    &__thumb {
+        width: 120px;
+        height:120px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        background: $base-color;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include breakpoint(max-xl) {
+            width: 110px;
+            height: 110px;
+        }
+        @include breakpoint(max-lg) {
+            width: 90px;
+            height:90px;
+        }
+        @include breakpoint(max-sm) {
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 55px;
+            margin-left: auto;
+            transform: translate(20px, -35px);
+            border: 4px solid $white;
+            border-radius: 50%;
+            @include breakpoint(max-xl) {
+                max-width: 52px;
+            }
+            @include breakpoint(max-lg) {
+                max-width: 48px;
+            }
+        }
+        .serial-number {
+            font-size: 56px;
+            position: absolute;
+            left: 15px;
+            color: rgba($primary-color, .1);
+            font-weight: 700;
+            font-family: $heading;
+            color: $white;
+            @include breakpoint(max-xl) {
+                font-size: 50px;
+            }
+            @include breakpoint(max-lg) {
+                font-size: 46px;
+            }
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 7px;
+        }
+    }
+}
+// How it Works Section Ends Here
+
+
+// Service Section Starts Here
+.service-item {
+    text-align: center;
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba($primary-color, .1);
+    @include transition;
+    @include breakpoint(max-xl) {
+        padding: 40px 30px;
+    }
+    &:hover {
+        box-shadow: 0 5px 25px rgba($primary-color, .15);
+        background: $base-color;
+        transform: translateY(-6px);
+        .service-item__thumb {
+            background: $white;
+        }
+        .service-item__content {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+            .btn {
+                color: $white;
+                &::before {
+                    background: rgba($white,.2);
+                    width: 50%;
+                }
+            }
+        }
+    }
+    &__thumb {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 35px;
+        background: rgba($primary-color, .1);
+        border-radius: 7px;
+        @extend %flex-center;
+        @include transition;
+        @include breakpoint(max-xl) {
+            margin-bottom: 28px;
+        }
+        img {
+            max-width: 40px;
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 8px;
+        }
+        .btn {
+            margin-top: 35px;
+            position: relative;
+            @include breakpoint(max-xl) {
+                margin-top: 25px;
+            }
+            &:hover {
+                color: $base-color;
+                &::before {
+                    width: 50%;
+                }
+            }
+            &::before {
+                border-radius: 5px;
+                @include before-set;
+                background: rgba($primary-color, .1);
+                width: 25%;
+                @include transition;
+            }
+        }
+    }
+}
+// Service Section Ends Here
+
+
+// Counter Section Starts Here
+.counter-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $base-color;
+        opacity: .75;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.counter-item {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid rgba($white, .3);
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(max-xl) {
+        padding: 25px 20px;
+    }
+    &__icon {
+        font-size: 56px;
+        color: $white;
+        line-height: 1;
+        margin-bottom: 15px;
+        @include breakpoint(xxl) {
+            margin-bottom: 25px;
+        }
+        @include breakpoint(max-xl) {
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        .title {
+            color: $white;
+        }
+        .info {
+            font-size: 20px;
+            color: $white;
+            font-weight: 300;
+            @include breakpoint(xxl) {
+                font-size: 24px;
+                
+            }
+        }
+    }
+}
+// Counter Section Ends Here
+
+
+// Testimonial Section Starts Here
+.testimonial-slider {
+    .slick-list {
+        padding: 20px 0 !important;
+    }
+    .single-slide {
+        @include transition;
+    }
+    @include breakpoint(lg) {
+        .slick-current {
+            transform: translateY(-15px);
+        }
+    }
+}
+.testimonial-item {
+    @include breakpoint(max-md) {
+        margin: 0 5px;
+    }
+    .quote-icon {
+        font-size: 56px;
+        line-height: 1;
+        display: block;
+        text-align: left;
+        color: $base-color;
+        margin-bottom: 10px;
+    }
+    &__content {
+        padding: 20px 20px 35px;
+        border: 1px solid $border-color;
+        position: relative;
+        background: $base-color;
+        * {
+            color: $white;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: $base-color;
+            bottom: 1px;
+            transform: translate(-50%, 100%);
+            left: 50%;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+        }
+        .name {
+            margin-top: 15px;
+        }
+    }
+    &__thumb {
+        position: relative;
+        .thumb {
+            width: 80px;
+            height:80px;
+            margin: 35px auto 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+// Testimonial Section Ends Here
+
+
+// Blog Section Starts Here
+.post-item {
+    background: $white;
+    padding: 5px;
+    border: 1px solid $border-color;
+    @include transition;
+    &:hover {
+        box-shadow: 0 5px 15px 3px rgba($primary-color,.1);
+        .post-item__thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__thumb {
+        height: 270px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        padding: 25px 15px;
+        .title {
+            margin-bottom: 20px;
+            @include breakpoint(max-xl) {
+                margin-bottom: 15px;
+            }
+            a {
+                @include text-wrap;
+                &:hover {
+                    color: $base-color;
+                }
+            }
+        }
+        .post-meta {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding: 4px 0;
+            margin-left: 10px;
+            border-radius: 50px 0 0 50px;
+            background: rgba($dark,.03);
+            margin-right: -20px;
+            border: 1px solid $border-color;
+            border-right: 0;
+            li {
+                padding: 0;
+            }
+            .post-author {
+                display: flex;
+                align-items: center;
+                margin-right: 25px;
+                &__thumb {
+                    margin: -5px;
+                    margin-right: 10px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .name {
+                    font-size: 15px;
+                }
+            }
+            .date {
+                font-size: 14px;
+                i {
+                    font-size: 13px;
+                    margin-right: 2px;
+                }
+            }
+        }
+        p {
+            margin-top: 20px;
+            @include breakpoint(max-xl) {
+                margin-top: 15px;
+            }
+        }
+        .read-more {
+            margin-top: 20px;
+            color: $title-color;
+            position: relative;
+            padding-right: 10px;
+            @include breakpoint(max-xl) {
+                margin-top: 10px;
+            }
+            &:hover {
+                color: $base-color;
+                &::before {
+                    transform: translateX(7px);
+                    background: $base-color;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 35px;
+                height: 2px;
+                background: $title-color;
+                left: 100%;
+                top: 49%;
+                @include transition;
+            }
+        }
+    }
+}
+// Blog Section Ends Here
+
+
+// Brand Section Starts Here
+.brand-item {
+    margin: 0 12px;
+    border: 1px solid $border-color;
+    padding: 10px;
+    .thumb {
+        max-width: 150px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+// Brand Section Ends Here
+
+
